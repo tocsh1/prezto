@@ -9,3 +9,108 @@
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+#
+# Timeout
+#
+export TMOUT=300
+
+#
+# Environement variable
+#
+export TERM='rxvt-256color'
+export DOTFILES="$HOME/.local/share/chezmoi"
+export WORKSPACE="$HOME/workspace"
+
+#
+# XDG direcotry
+#
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_BIN_HOME="$HOME/.local/bin"
+export XDG_LIB_HOME="$HOME/.local/lib"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+
+#
+# Editor
+#
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+#
+# Browser
+#
+export BROWSER=firefox
+
+#
+# History
+#
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=10000
+export SAVEHIST=10000
+
+#
+# Man pages
+#
+export MANPAGER='nvim +Man!'
+
+#
+# gpg
+#
+export GPG_TTY=$(tty)
+
+#
+# Java
+#
+export JAVA_HOME="/usr/lib/jvm/openjdk17"
+
+#
+# Python
+#
+export PYTHON_PATH="$HOME/miniconda3/envs/venv/bin"
+
+#
+# Go
+#
+export GOPATH="/usr/local/go/bin"
+export GOCACHE="$XDG_CACHE_HOME/go-build"
+
+#
+# Rust
+#
+export RUSTPATH="$HOME/.cargo/bin"
+
+#
+# Julia
+#
+export JULIAPATH="/opt/julia-1.9.3/bin"
+
+#
+# JAVASCRIPT
+#
+export JAVASCRIPT="$HOME/node_modules/.bin"
+
+#
+# PostegreSQL
+#
+export PGDATA="/mnt/lvs-datavol/postgres"
+
+#
+# Path
+#
+export PATH="$RUSTPATH:$PATH"
+export PATH="$GOPATH:$PATH"
+export PATH="$NPM_BIN:$PATH"
+export PATH="$JULIAPATH:$PATH"
+export PATH="$JAVASCRIPT:$PATH"
+export PATH="$PYTHON_PATH:$PATH"
+export SVDIR="~/service"
+
+export PATH="/usr/local/bin:$HOME/.local/bin:$HOME/.fnm:/opt/pgModeler:$PATH"
+
+export work="/mnt/raid5/work"
+export sites="/mnt/raid5/www"
+
+. "$HOME/.cargo/env"
+

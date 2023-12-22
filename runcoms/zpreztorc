@@ -33,11 +33,16 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
+  'autosuggestions' \
   'history' \
   'directory' \
   'spectrum' \
   'utility' \
+  'node' \
   'completion' \
+  'fasd' \
+  'ssh' \
+  'python' \
   'history-substring-search' \
   'prompt'
 
@@ -59,9 +64,6 @@ zstyle ':prezto:load' pmodule \
 #
 # Editor
 #
-
-# Set the characters that are considered to be part of a word.
-# zstyle ':prezto:module:editor' wordchars '*?_-.[]~&;!#$%^(){}<>'
 
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':prezto:module:editor' key-bindings 'emacs'
@@ -145,7 +147,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
+#zstyle ':prezto:module:prompt' theme 'agnoster'
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
@@ -254,3 +256,4 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
+
